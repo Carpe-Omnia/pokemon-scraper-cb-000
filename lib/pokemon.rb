@@ -18,7 +18,7 @@ class Pokemon
     ztype = db.execute("SELECT type FROM pokemon WHERE id = '#{id}';")
     zname = db.execute("SELECT name FROM pokemon WHERE id = '#{id}';")
     #dude = db.execute(command)
-    bro = self.new(id: zid[0][0], name: ztype, type: zname, db: db)
+    bro = self.new(id: zid[0][0], name: zname[0][0], type: ztype[0][0], db: db)
     puts bro
     bro
   end
