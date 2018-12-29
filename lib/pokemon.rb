@@ -11,6 +11,6 @@ class Pokemon
     #command = "INSERT INTO pokemon (name, type) VALUES (#{name}, #{type})"
     #db.execute(command)
     db.execute("INSERT INTO pokemon (name, type)
-     VALUES (ass, type)")
+     VALUES ('ass', 'type')")
   end
 end
