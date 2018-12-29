@@ -11,6 +11,9 @@ class Pokemon
     #command = "INSERT INTO pokemon (name, type) VALUES (#{name}, #{type})"
     #db.execute(command)
     db.execute("INSERT INTO pokemon (name, type)
-     VALUES ('#{name}', '#{type}')")
+     VALUES ('#{name}', '#{type}');")
   end
+  def self.find(id, db)
+    command = "SELECT * FROM pokemon WHERE id = '#{id}';"
+  end   
 end
