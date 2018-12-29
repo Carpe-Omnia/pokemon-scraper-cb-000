@@ -17,5 +17,6 @@ class Pokemon
     command = "SELECT * FROM pokemon WHERE id = '#{id}';"
     dude = db.execute(command)
     bro = self.new(id: dude[0], name: dude[1], type: dude[2], db: db)
+    bro
   end
 end
