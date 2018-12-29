@@ -14,8 +14,10 @@ class Pokemon
      VALUES ('#{name}', '#{type}');")
   end
   def self.find(id, db)
-    command = "SELECT * FROM pokemon WHERE id = '#{id}';"
-    dude = db.execute(command)
+    zid = "SELECT id FROM pokemon WHERE id = '#{id}';"
+    ztype = "SELECT type FROM pokemon WHERE id = '#{id}';"
+    zname = "SELECT name FROM pokemon WHERE id = '#{id}';"
+    #dude = db.execute(command)
     bro = self.new(id: dude[0], name: dude[1], type: dude[2], db: db)
     puts bro
     bro
